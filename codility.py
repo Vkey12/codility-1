@@ -1,13 +1,15 @@
 def solution(A, D):
     balance = 0
     transactions = {}
+    year = 2020
     
+    # to loop through
     for i in range(len(A)):
         amount = A[i]
         date = D[i]
         transactions[date] = transactions.get(date, 0) + amount
     
-    
+    # to get the date 
     for date, amount in transactions.items():
         year, month, _ = date.split('-')
         
@@ -24,4 +26,4 @@ def solution(A, D):
 # Example usage:
 A1 = [100, 100, 100, -10]
 D1 = ["2020-12-31", "2020-12-22", "2020-12-03", "2020-12-29"]
-print(solution(A1, D1))  # Output: 230
+print(solution(A1, D1))  
