@@ -16,7 +16,7 @@ def solution(A, D):
             else:
                 cards[month] = [i]
     # loop through months
-    for month in range(1, 12):
+    for month in range(1, 13):
         if month in cards and len(cards[month]) >= 3 and sum (cards[month]) >= -100:
             balance += monthly_fees * (len(cards[month]) - 3)
         else:
